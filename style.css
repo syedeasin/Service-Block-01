@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*
+{
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #c793f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container
+{
+    display: flex;
+    width: 1100px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.container .box
+{
+    width: 320px;
+    position: relative;
+    background: #fff;
+    padding: 120px 30px 70px 30px;
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.034);
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+}
+.container .box::before
+{
+    content: '';
+    position: absolute;
+    background: blueviolet;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    border-radius: 8px;
+    align-items: center;
+}
+.container .box:hover::before
+{
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    border-radius: 8px;
+}
+
+/* Number  Heading Start  */
+.box h2
+{
+    font-weight: 800;
+    font-size: 3.5em;
+    left: 30px;
+    top: 65px;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.1;
+    padding-top: 20px;
+}
+.box:hover h2
+{
+    opacity: 1;
+    color: #fff;
+    font-size: 3.5em;
+    transform: translateY(-30px);
+}
+/* Number Heading End  */
+
+/* Box Title Start  */
+.box h3
+{
+    position: relative;
+    font-size: 1.3em;
+    z-index: 2;
+    color: #333;
+    transition: 0.5s;
+    font-weight: 600;
+}
+.box:hover h3
+{
+    color: #fff;
+}
+/* Box Title End  */
+
+/* Box Paragraph Start  */
+.box p
+{
+    position: relative;
+    font-size: 1em;
+    z-index: 2;
+    color: #555;
+    transition: 0.5s;
+}
+.box:hover p
+{
+    color: #fff;
+}
+
+.container .box:nth-child(4), .container .box:nth-child(5), .container .box:nth-child(6)
+{
+    margin-top: 20px;
+}
+/* Box Paragraph End  */
